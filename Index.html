@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumberGame</title>
+    <style>
+        body
+        {
+            background-color: #F4F6F7;
+        }
+      
+        .main
+        {  margin: auto;
+           margin-top: 100px;
+           padding: 30px;
+           width: 50%;
+           background-color: #BDC3C7;
+           text-align: center;
+           border: 10px outset #CACFD2;
+           border-radius: 20px;
+           
+        }
+        .main p
+        {
+            font-size: 40px;
+        }
+        #guess
+        {
+            margin: auto;
+            width: 70%;
+            height: 60px;
+            border-radius: 30px;
+            text-align: center;
+            font-size: 50px;
+        }
+        #guesscheck
+        {
+            width: 150px;
+            height: 75px;
+            border-radius: 50px;
+            background-color:#13EBF5;
+            border: solid;
+            font-size: 40px;
+        }
+        #guesscheck:hover
+        {
+            background-color: #04FAC2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main" ">
+        <p>What number is I am Thinking?</p>
+        <p>***number between 1-10</p>
+        <p><input type="number" id="guess"></p>
+        <p><button id="guesscheck">Guess!</button></p>
+    </div>
+    <script ttpe="text/javascript">
+        document.getElementById("guesscheck").onclick=function()
+        {
+
+            var randomNumber=Math.random();
+            randomNumber = randomNumber*11;
+            randomNumber =Math.floor(randomNumber);
+
+            if (document.getElementById("guess").value==randomNumber)
+             {
+               alert("Congratulations😘💕👌\nYou guessed my number❤️😍");
+             }
+            else
+             {
+               alert("Nope!! Try again,I am thinking number "+randomNumber+"😒😢");
+             }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+        
